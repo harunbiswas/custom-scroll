@@ -7,6 +7,7 @@ const Carousel = ({ cards }) => {
   const [wheelCount, setWheelCount] = useState(0);
   const [isSliderInView, setIsSliderInView] = useState(false);
   const sliderRef = useRef(null);
+  const [currentSlide, setCurrentSlide] = useState(6);
 
   const settings = {
     dots: false,
@@ -16,6 +17,7 @@ const Carousel = ({ cards }) => {
     focusOnSelect: true,
     initialSlide: 6,
     centerMode: true,
+    afterChange: (current) => setCurrentSlide(current),
     centerPadding: "0%",
     responsive: [
       {
@@ -46,7 +48,15 @@ const Carousel = ({ cards }) => {
     });
   };
 
-  console.log(wheelCount);
+  useEffect(() => {
+    const otherItems = document.querySelectorAll(".custom-slider .slick-slide");
+    const currentWidth = otherItems[0].offsetWidth;
+    setWheelCount(1);
+    otherItems.forEach((item) => {
+      item.style.width = `${currentWidth}px`;
+    });
+  }, [currentSlide]);
+
   useEffect(() => {
     if (isSliderInView && wheelCount > 0 && wheelCount < 80) {
       const disableScroll = (event) => {
