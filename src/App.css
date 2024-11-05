@@ -1,0 +1,58 @@
+.carousel {
+  width: 90%;
+  margin: 20px auto;
+}
+.custom-slider {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.slick-slide {
+  /* padding: 0 10px; */
+  /* overflow: hidden; */
+}
+
+.card {
+  padding: 0 10px;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  position: relative;
+  transition: 0.4s;
+}
+
+.card:hover {
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.slick-center .card:hover {
+  transform: scale(1);
+}
+
+.slick-slide {
+  /* height: 100vh !important; */
+  align-items: center;
+  justify-content: center;
+  display: flex !important;
+}
+
+.slick-center .card .effect {
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: calc(100% - 20px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  height: 100%;
+}
