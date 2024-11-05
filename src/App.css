@@ -38,7 +38,11 @@
   align-items: center;
   justify-content: center;
   display: flex !important;
-  transition: 0.4s;
+  transition: width 0.4s, margin 0s;
+}
+
+.slick-center {
+  transition: 0s;
 }
 
 .slick-center .card .effect {
