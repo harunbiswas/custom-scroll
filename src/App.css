@@ -14,7 +14,7 @@
 }
 
 .card {
-  padding: 0 10px;
+  padding: 0 30px;
   aspect-ratio: 3 / 2;
   overflow: hidden;
   position: relative;
@@ -24,13 +24,13 @@
   transition: 0.4s;
 }
 
-.card img:hover {
+.card:hover {
   transform: scale(1.1);
   z-index: 1;
 }
 
-.slick-center .card:hover {
-  transform: scale(1);
+.slick-center .card {
+  transform: scale(1.1);
 }
 
 .slick-slide {

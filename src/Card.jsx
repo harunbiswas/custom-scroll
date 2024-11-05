@@ -31,7 +31,7 @@ const Carousel = ({ cards }) => {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          centerPadding: "15%",
+          centerPadding: "20%",
         },
       },
     ],
